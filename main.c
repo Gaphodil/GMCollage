@@ -722,7 +722,7 @@ int main(int argc, char** argv)
                 if (!module->written_sections[ii])
                 {
                     printf("WARNING: Couldn't find folder '");
-                    printf(module->resource_path[ii]);
+                    printf(module->resource_type[ii]);
                     printf(",");
                     printf(module->resource_path[ii]);
                     printf("' in ");
