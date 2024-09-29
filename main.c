@@ -374,7 +374,7 @@ int main(int argc, char** argv)
             printf("ERROR: Specify at least one .module file to import\n");
         else
             printf("ERROR: Specify at least one .moduleconfig file to use in export\n");
-        return;
+        return 1;
     }
 
     char* project = malloc_file(project_path);
@@ -722,7 +722,7 @@ int main(int argc, char** argv)
                 if (!module->written_sections[ii])
                 {
                     printf("WARNING: Couldn't find folder '");
-                    printf(module->resource_path[ii]);
+                    printf(module->resource_type[ii]);
                     printf(",");
                     printf(module->resource_path[ii]);
                     printf("' in ");
